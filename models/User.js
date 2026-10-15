@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
     password: {type:String, required: true, minlength: 5},
     profilePic: {type: String, default: ""},
     bio: {type: String},
+    lastSeen: {type: Date, default: Date.now},
     following: [{ type: mongoose.Schema.Types.ObjectId, ref: "User", default: [] }],
     followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User", default: [] }],
 }, {timestamps: true});

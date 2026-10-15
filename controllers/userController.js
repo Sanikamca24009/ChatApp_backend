@@ -118,6 +118,7 @@ export const getAllUsers = async (req, res) => {
                 email: u.email,
                 profilePic: u.profilePic,
                 bio: u.bio,
+                lastSeen: u.lastSeen,
                 isFollowing,
                 isFollower,
                 isMutual,
